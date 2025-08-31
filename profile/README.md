@@ -7,17 +7,17 @@
 Galaplate is organized into three main repositories that work together to provide a complete development experience:
 
 ```
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   📦 Core       │    │   🛠️ CLI        │    │   🎯 Galaplate  │
-│                 │    │                 │    │                 │
+┌─────────────────┐    ┌─────────────────┐     ┌─────────────────┐
+│   📦 Core       │    │   🛠️ CLI        │     │   🎯 Galaplate  │
+│                 │    │                 │     │                 │
 │ Framework &     │◄───│ Project         │────►│ Example         │
-│ Libraries       │    │ Generator       │    │ Implementation  │
-│                 │    │                 │    │                 │
-│ • Fiber Router  │    │ • Templates     │    │ • Live Demo     │
-│ • GORM Database │    │ • Scaffolding   │    │ • Documentation │
-│ • Console Cmds  │    │ • Cross-platform│    │ • Best Practices│
-│ • Job Queue     │    │                 │    │                 │
-└─────────────────┘    └─────────────────┘    └─────────────────┘
+│ Libraries       │    │ Generator       │     │ Implementation  │
+│                 │    │                 │     │                 │
+│ • Fiber Router  │    │ • Templates     │     │ • Live Demo     │
+│ • GORM Database │    │ • Scaffolding   │     │ • Documentation │
+│ • Console Cmds  │    │ • Cross-platform│     │ • Best Practices│
+│ • Job Queue     │    │                 │     │                 │
+└─────────────────┘    └─────────────────┘     └─────────────────┘
 ```
 
 ## 📚 Repository Guide
@@ -56,10 +56,10 @@ The command-line tool for generating new projects and scaffolding code. Cross-pl
 ### 1. Install the CLI
 ```bash
 # Quick install to /usr/local/bin
-curl -sSL https://raw.githubusercontent.com/galaplate/cli/main/install.sh | sudo bash
+curl -s https://raw.githubusercontent.com/galaplate/cli/main/install.sh -o /tmp/install.sh && chmod +x /tmp/install.sh && sudo /tmp/install.sh
 
 # Or install to custom directory
-curl -sSL https://raw.githubusercontent.com/galaplate/cli/main/install.sh | bash -s -- -d ~/.local/bin
+curl -s https://raw.githubusercontent.com/galaplate/cli/main/install.sh -o /tmp/install.sh && chmod +x /tmp/install.sh && sudo /tmp/install.sh -d ~/.local/bin
 ```
 
 ### 2. Generate a New Project
@@ -121,6 +121,11 @@ Seamless database operations with GORM:
 ```go
 // Auto-migrations
 db.AutoMigrate(&User{})
+
+// Or create migration using dbmate
+go run main.go console db:create create_users_table
+Creating migration: db/migrations/20250831001745_create_users_table.sql
+go run main.go console db:up
 
 // Query with pagination
 users := pagination.Paginate(db, &User{}, page, limit)
