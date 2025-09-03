@@ -143,9 +143,9 @@ users := pagination.Paginate(db, &User{}, page, limit)
 
 | Component | Status | Version | Language |
 |-----------|--------|---------|-----------|
-| **Core** | ✅ Stable | v0.0.1 | Go 1.22+ |
-| **CLI** | ✅ Stable | Latest | Go 1.22+ |
-| **Galaplate** | ✅ Active | Latest | Go 1.22+ |
+| **Core** | :x: Stable | v0.0.6 | Go 1.22+ |
+| **CLI** | :x: Stable | v0.1.0 | Go 1.22+ |
+| **Galaplate** | :x: Active | v0.0.5 | Go 1.22+ |
 
 ## 🗺️ Roadmap
 
