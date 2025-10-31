@@ -8,7 +8,7 @@ Galaplate is organized into three main repositories that work together to provid
 
 ```
 ┌─────────────────┐    ┌─────────────────┐     ┌─────────────────┐
-│   📦 Core       │    │   🛠️ CLI        │     │   🎯 Galaplate  │
+│       Core      |    │       CLI       │     │    Galaplate    │
 │                 │    │                 │     │                 │
 │ Framework &     │◄───│ Project         │────►│ Example         │
 │ Libraries       │    │ Generator       │     │ Implementation  │
@@ -20,9 +20,9 @@ Galaplate is organized into three main repositories that work together to provid
 └─────────────────┘    └─────────────────┘     └─────────────────┘
 ```
 
-## 📚 Repository Guide
+## Repository Guide
 
-### [🎯 galaplate/galaplate](https://github.com/galaplate/galaplate)
+### [galaplate/galaplate](https://github.com/galaplate/galaplate)
 The reference implementation and documentation hub. Contains a fully working REST API with authentication, database operations, background jobs, and comprehensive documentation.
 
 **Use this to:**
@@ -31,17 +31,17 @@ The reference implementation and documentation hub. Contains a fully working RES
 - Access complete documentation
 - Get started quickly with a full-featured API
 
-### [📦 galaplate/core](https://github.com/galaplate/core)
+### [galaplate/core](https://github.com/galaplate/core)
 The foundational library containing all reusable components and utilities. This is the heart of the Galaplate ecosystem.
 
 **Features:**
-- 🌐 **Fiber-based HTTP router** with middleware support
-- 🗄️ **GORM integration** for MySQL and PostgreSQL
-- 🎮 **Console command system** with built-in generators
-- 🔄 **Background job queue** with cron scheduling
-- 📝 **Structured logging** with rotation
-- ✅ **Validation & DTO** support
-- 🔐 **Authentication utilities**
+- **Fiber-based HTTP router** with middleware support
+- **GORM integration** for MySQL and PostgreSQL
+- **Console command system** with built-in generators
+- **Background job queue** with cron scheduling
+- **Structured logging** with rotation
+- **Validation & DTO** support
+- **Authentication utilities**
 
 ### [🛠️ galaplate/cli](https://github.com/galaplate/cli)
 The command-line tool for generating new projects and scaffolding code. Cross-platform binary for Linux, macOS, and Windows.
@@ -89,9 +89,9 @@ go run main.go console make:controller UserController
 make dev
 ```
 
-## 🎯 Key Features
+## Key Features
 
-### 💻 Powerful Console Commands
+### Powerful Console Commands
 Built-in generators for rapid development:
 ```bash
 go run main.go console make:model User       # Generate models
@@ -101,7 +101,7 @@ go run main.go console make:dto UserRequest  # Generate DTOs
 go run main.go console db:up                 # Run migrations
 ```
 
-### 🔄 Background Processing
+### Background Processing
 Robust job queue system with cron scheduling:
 ```go
 // Queue jobs
@@ -116,7 +116,7 @@ scheduler.AddFunc("@daily", func() {
 })
 ```
 
-### 🗄️ Database Integration
+### Database Integration
 Seamless database operations with GORM:
 ```go
 // Auto-migrations
@@ -131,7 +131,7 @@ go run main.go console db:up
 users := pagination.Paginate(db, &User{}, page, limit)
 ```
 
-### 🛡️ Production Ready
+### Production Ready
 - Structured logging with rotation
 - Input validation and DTOs
 - Authentication utilities
@@ -139,36 +139,36 @@ users := pagination.Paginate(db, &User{}, page, limit)
 - Docker support
 - Cross-platform builds
 
-## 📊 Project Status
+## Project Status
 
 | Component | Status | Version | Language |
 |-----------|--------|---------|-----------|
-| **Core** | :x: Stable | v0.0.7 | Go 1.22+ |
+| **Core** | :x: Stable | v0.0.20 | Go 1.22+ |
 | **CLI** | :x: Stable | v0.1.0 | Go 1.22+ |
-| **Galaplate** | :x: Active | v0.0.5 | Go 1.22+ |
+| **Galaplate** | :x: Active | v0.0.8 | Go 1.22+ |
 
 ## 🗺️ Roadmap
 
-### 🎯 Current (v0.1.x)
+### Current (v0.1.x)
 - [x] Core framework with essential features
 - [x] CLI tool with API template
 - [x] Cross-platform releases
 - [x] Comprehensive documentation
 - [ ] Test setup and framework integration
 
-### 🚀 Next (v0.2.x)
+### Next (v0.2.x)
 - [ ] Full-stack template with frontend
 - [ ] Microservice template
 - [ ] Interactive project setup
 - [ ] Template customization
 
-### 🔮 Future (v0.3.x)
+### Future (v0.3.x)
 - [ ] Custom template support
 - [ ] Plugin system architecture
 - [ ] Advanced monitoring tools
 - [ ] Kubernetes deployment helpers
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Each repository has its own contribution guidelines:
 
@@ -176,7 +176,7 @@ We welcome contributions! Each repository has its own contribution guidelines:
 - **CLI**: Template enhancements, new generators, platform support
 - **Galaplate**: Documentation, examples, tutorials
 
-## 📄 License
+## License
 
 MIT License - see individual repositories for details.
 
